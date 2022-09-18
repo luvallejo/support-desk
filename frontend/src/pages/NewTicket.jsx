@@ -9,7 +9,7 @@ import BackButton from '../components/BackButton';
 function NewTicket() {
   const { user } = useSelector((state) => state.auth);
   const { isLoading, isError, isSuccess, message } = useSelector(
-    (state) => state.ticket
+    (state) => state.tickets //CAMBIADO TICKET POR TICKETS
   );
 
   const [name, setName] = useState(user.name);
@@ -68,7 +68,7 @@ function NewTicket() {
               onChange={(e) => setProduct(e.target.value)}
             >
               <option value='iPhone'>iPhone</option>
-              <option value='Macbook Pro'>Macbook</option>
+              <option value='Macbook Pro'>Macbook Pro</option>
               <option value='iMac'>iMac</option>
               <option value='iPad'>iPad</option>
             </select>
